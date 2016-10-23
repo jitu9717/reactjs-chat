@@ -1,0 +1,31 @@
+.messageArea {
+    font-size: 22px;
+    background: lightblue;
+}
+
+.inputArea {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.chatArea {
+    background: #e2e2e2;
+}
+
+.left {
+    margin-left: 0;
+    background : red;
+}
+.right {
+    margin-right: 0;
+    background : blue;
+}
+
+.classHide {
+    display : none
+}
+
+.classShow{
+    display : block;
+}
