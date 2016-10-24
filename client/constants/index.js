@@ -1,5 +1,5 @@
 /**
- * Created by pooja on 21/10/16.
+ * Created by Jitender on 21/10/16.
  */
 
 export const SEND_MESSAGE = 'SEND_MESSAGE';

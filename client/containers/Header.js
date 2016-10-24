@@ -1,5 +1,5 @@
 /**
- * Created by pooja on 24/10/16.
+ * Created by Jitender on 24/10/16.
  */
 
 import React from 'react';
@@ -9,15 +9,15 @@ class Header extends React.Component {
 
     render() {
 
-        let {clickHandler, btnText, greetings, spanText , className} = this.props;
+        let {clickHandler, spanText , className} = this.props;
         
         return (
             
             <div className={className}>
-                <Button onClick={clickHandler} value={btnText}/>
                 <span>
-                    {greetings} {spanText}
+                    {"Hi"} {spanText},<br/>
                 </span>
+                <Button onClick={clickHandler} value="Exit" />
             </div>
             
         );

@@ -1,5 +1,5 @@
 /**
- * Created by pooja on 22/10/16.
+ * Created by Jitender on 22/10/16.
  */
 
 import React from 'react';
@@ -50,9 +50,9 @@ class Login extends React.Component {
         return (
             <div className="loginDiv">
                 <InputField value={this.state.userName} onChange={this.changeHandler} type="input"
-                            placeholder="Enter Username" required/><br/>
-                <Button onClick={this.login} value="Sign In"/>
-                <Button onClick={this.signUp} value="Sign Up"/><br/>
+                            placeholder="Username" required/>
+                <Button bsStyle="info" onClick={this.login} value="Chat Signin"/>
+                <Button bsStyle="info" onClick={this.signUp} value="Chat Signup"/>
                 <Paragraph className={!this.props.errorMessage ? "classHide" : "classShow"}
                            value={this.props.errorMessage}/><br/>
             </div>

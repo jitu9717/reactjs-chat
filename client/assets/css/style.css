@@ -1,23 +1,17 @@
 /* Root component */
 
 .main {
-    width: 60%;
     margin: auto;
+    height: 100%;
 }
 
 /* Login component */
 
 .loginDiv {
-    width: 50%;
     margin: auto;
-    min-height: 273px;
-    padding: 20px;
-    margin-top: 150px;
 }
 
 .loginDiv input {
-    margin-left: 15%;
-    margin-top: 57px;
     height: 45px;
     width: 260px;
     font-size: 18px;
@@ -32,18 +26,15 @@
 }
 
 .loginDiv button {
-    background: linear-gradient(#3CB371, #3CB371);
-    width: 120px;
+    background: linear-gradient(#D3D3D3, #D3D3D3);
+    width: 160px;
     height: 45px;
-    border-radius: 7px;
-    margin-top: 40px;
     margin-left: 47px;
     font-size: 25px;
-    color: #fff;
+    color: #000000;
 }
 
 .loginDiv p {
-    text-align: center;
     margin-top: 25px;
     font-size: 20px;
     color: red;
@@ -61,13 +52,11 @@ p {
 /* Home component */
 
 .home {
-    background : black;
     padding:10px;
 }
 
 .header {
     padding-bottom : 10px;
-    border-bottom : 1px double #eee;
     margin-bottom : 10px;
 }
 
@@ -76,7 +65,7 @@ p {
     font-size: 34px;
     font-weight: 500;
     margin-top: -6px;
-    color: #fff
+    color: #000000;
 }
 
 .header button, .home div:nth-child(4) button {
@@ -87,21 +76,21 @@ p {
     background: linear-gradient(#bdc3c7, #95a5a6);
     border: none;
     outline: none;
-    float: right;
     font-size : 18px;
     letter-spacing : 1px;
+    border-radius:10px;
 }
 
 .chatArea {
-    max-height:510px;
+    max-height:460px;
     overflow:auto;
     overflow-x: hidden;
 }
 
 .subChatArea {
-    width : 45%;
-    border-radius: 7px;
-    background-color: #cfd8dc;
+    width : 30%;
+    border: 1px solid #000000;
+    border-radius: 10px;
     margin-bottom : 10px;
     min-height : 60px;
     padding : 10px;
@@ -111,7 +100,7 @@ p {
 .subChatArea p {
     padding:10px;
     margin-top : -75px;
-    margin-left : 80px;
+    margin-left : 5px;
 }
 
 .circle {
@@ -129,12 +118,16 @@ p {
 .inputArea {
     height : 40px;
     margin-top:8px;
+    border-top: 1px solid #000000;
+    padding-top: 5px;
 }
 
 .inputArea input {
-    width:83%;
+    width:50%;
     height : 35px;
     font-size : 18px;
+    margin-left: 50px;
+    border-radius: 15px;
 }
 
 .inputArea input:focus {
@@ -169,3 +162,4 @@ p {
 .clearfix:after {
     clear: both;
 }
+

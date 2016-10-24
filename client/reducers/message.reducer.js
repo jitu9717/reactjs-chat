@@ -1,5 +1,5 @@
 /**
- * Created by pooja on 21/10/16.
+ * Created by Jitender on 21/10/16.
  */
 
 import {MESSAGE_RECEIVED, MESSAGE_SENT, MESSAGES_LOADED, TYPING, STOP_TYPING} from '../constants';

@@ -1,5 +1,5 @@
 /**
- * Created by pooja on 24/10/16.
+ * Created by Jitender on 24/10/16.
  */
 
 import {USER_EXISTS} from '../constants';

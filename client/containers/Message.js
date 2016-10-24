@@ -1,5 +1,5 @@
 /**
- * Created by pooja on 21/10/16.
+ * Created by Jitender on 21/10/16.
  */
 
 import React from 'react';
@@ -28,7 +28,7 @@ class Message extends React.Component {
         let res = message.from.name.substring(0,1);
         let value= '';
         if (this.state.token == message.from.id)
-            value = 380;
+            value = 300;
         else
             value = 0;
 
@@ -36,16 +36,16 @@ class Message extends React.Component {
         return (
             <div className="subChatArea" style={{marginLeft : value}}>
                 <div className="circle">
-                    {res}
+
                 </div>
                 <p className = 'subChatAreaP'>
 
                     <span className='left'>
-                        {message.from.name}
+                       <b> {message.from.name} : </b>
                     </span><br/>
 
                     <span className='right' style={{marginTop:-17}}>
-                        time
+
                     </span><br/>
 
                     <span>
