@@ -1,5 +1,5 @@
 /**
- * Created by Jitender on 21/10/16.
+ * Created by pooja on 21/10/16.
  */
 
 import {MESSAGE_RECEIVED, MESSAGE_SENT, MESSAGES_LOADED, TYPING, STOP_TYPING} from '../constants';
@@ -18,6 +18,7 @@ export function loadMessages(userName, userId) {
 }
 
 export default function messagesLoaded (userName, userId, messages) {
+    console.log("messages loaded----------")
     return {
         type : MESSAGES_LOADED,
         state : {

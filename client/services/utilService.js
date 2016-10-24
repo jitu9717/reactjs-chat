@@ -1,5 +1,5 @@
 /**
- * Created by Jitender on 23/10/16.
+ * Created by pooja on 23/10/16.
  */
 
 export function setCookie(cname, cvalue) {

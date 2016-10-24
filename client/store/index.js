@@ -1,5 +1,5 @@
 /**
- * Created by Jitender on 21/10/16.
+ * Created by pooja on 21/10/16.
  */
 
 import {createStore} from 'redux';

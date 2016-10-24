@@ -1,5 +1,5 @@
 /**
- * Created by Jitender on 21/10/16.
+ * Created by pooja on 21/10/16.
  */
 
 import {MESSAGE_RECEIVED, MESSAGE_SENT, MESSAGES_LOADED, TYPING, STOP_TYPING} from '../constants';
@@ -21,6 +21,7 @@ let initialState = {
 };
 
 export default function message(state = initialState, action) {
+    console.log(action,'action--')
 
     switch (action.type) {
 

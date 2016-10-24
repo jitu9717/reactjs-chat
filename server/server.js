@@ -42,23 +42,21 @@ const server = app.listen(port, function (err) {
     if (err) {
         console.log(err);
     } else {
-        console.log("Server running on http://localhost/%s",port);
+        console.log("Server running on http://localhost:%s",port);
         open(`http://localhost:${port}`);
-    }
-});
+            }
+    });
 
-const io = new SocketIo(server);
+    const io = new SocketIo(server);
 
-io.on('connection', function(socket) {
-    socket.on('chat', function(data) {
-        console.log("chat message", data)
-        socket.broadcast.emit('chat', data);
+    io.on('connection', function(socket) {
+        socket.on('chat', function(data) {
+            socket.broadcast.emit('chat', data);
+        });
+        socket.on('typing', function (data) {
+            socket.broadcast.emit('typing', data.user);
+        });
+        socket.on('stop typing', function (data) {
+            socket.broadcast.emit('stop typing', data.user);
+        });
     });
-    socket.on('typing', function (data) {
-        console.log('typing', data)
-        socket.broadcast.emit('typing', data.user);
-    });
-    socket.on('stop typing', function (data) {
-        socket.broadcast.emit('stop typing', data.user);
-    });
-});

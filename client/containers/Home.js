@@ -1,22 +1,23 @@
 /**
- * Created by Jitender on 22/10/16.
+ * Created by pooja on 22/10/16.
  */
 
 import React from 'react';
 import {connect} from 'react-redux';
+import {browserHistory} from 'react-router';
+import {getCookie, setCookie} from '../services/utilService';
+import {socket} from '../socket';
 import * as chatAction from '../actions/chat.action';
 import * as userAction from '../actions/login.action';
-import Message from '../components/Message'
-import EnterMessage from '../components/EnterMessageArea';
-import {getCookie, setCookie} from '../services/utilService';
-import {browserHistory} from 'react-router';
-import {socket} from '../socket';
+import Header from './Header';
+import MessageList from './MessageList';
+import InputArea from './InputArea';
 import Paragraph from '../components/Paragraph';
-import Button from '../components/Button';
 
 require('../assets/css/style.css');
 
 class Home extends React.Component {
+    
     constructor() {
         super();
         this.state = {
@@ -33,7 +34,7 @@ class Home extends React.Component {
         var token = getCookie('token');
         this.setState({
             token: token
-        })
+        });
         if (!token)
             browserHistory.push({
                 pathname: '/'
@@ -43,7 +44,6 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        console.log("called-------nn--")
         socket.on('typing', user => {
             this.props.dispatch(chatAction.typing(user))
             }
@@ -91,31 +91,24 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Hello {this.props.user.userName}</h1>
-                <div className="chatArea">
-                    {this.props.messages.map(
-                        function (message, i) {
-                            return <Message message={message} key={i}/>
-                        }
-                    )}
-                </div>
-                <Button onClick={this.logOut} value="Log Out"/>
+            <div className="home">
+                
+                <Header clickHandler={this.logOut} btnText='Log Out' spanText={this.props.user.userName} greetings="Hello" className="header"/>
 
+                <MessageList messages={this.props.messages} className="chatArea"/>
 
                 <Paragraph className={(!this.props.typingBy || this.props.typingBy === this.props.user.userName) ? "classHide" : "classShow"}
-                           />
+                    typingBy = {this.props.typingBy} value='is typing...'/>
 
-                <div className="inputArea">
-                    <EnterMessage value = {this.state.message} changeHandler={this.changeHandler} sendMessage={this.sendMessage}/>
-                </div>
-
+                <InputArea className="inputArea" value = {this.state.message} changeHandler={this.changeHandler} sendMessage={this.sendMessage}/>
+                
             </div>
         )
     }
 }
 
 function mapStateToProps(state) {
+
     return {
         messages: state.message.messages,
         user: state.message.user,

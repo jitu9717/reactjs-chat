@@ -1,31 +1,171 @@
-.messageArea {
-    font-size: 22px;
-    background: lightblue;
+/* Root component */
+
+.main {
+    width: 60%;
+    margin: auto;
 }
 
-.inputArea {
-    border: 1px solid black;
-    padding: 10px;
-    margin-top: 20px;
+/* Login component */
+
+.loginDiv {
+    width: 50%;
+    margin: auto;
+    min-height: 273px;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.loginDiv input {
+    margin-left: 15%;
+    margin-top: 57px;
+    height: 45px;
+    width: 260px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.loginDiv input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.loginDiv button {
+    background: linear-gradient(#3CB371, #3CB371);
+    width: 120px;
+    height: 45px;
+    border-radius: 7px;
+    margin-top: 40px;
+    margin-left: 47px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.loginDiv p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+    color: red;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    text-align: center;
+    font-size: 18px;
+}
+
+p {
+    word-wrap: break-word
+}
+
+/* Home component */
+
+.home {
+    background : black;
+    padding:10px;
+}
+
+.header {
+    padding-bottom : 10px;
+    border-bottom : 1px double #eee;
+    margin-bottom : 10px;
+}
+
+.header span {
+    width: 50%;
+    font-size: 34px;
+    font-weight: 500;
+    margin-top: -6px;
+    color: #fff
+}
+
+.header button, .home div:nth-child(4) button {
+    padding: 10px 30px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #bdc3c7;
+    background: linear-gradient(#bdc3c7, #95a5a6);
+    border: none;
+    outline: none;
+    float: right;
+    font-size : 18px;
+    letter-spacing : 1px;
 }
 
 .chatArea {
-    background: #e2e2e2;
+    max-height:510px;
+    overflow:auto;
+    overflow-x: hidden;
 }
 
-.left {
-    margin-left: 0;
-    background : red;
+.subChatArea {
+    width : 45%;
+    border-radius: 7px;
+    background-color: #cfd8dc;
+    margin-bottom : 10px;
+    min-height : 60px;
+    padding : 10px;
+    clear: both;
 }
-.right {
-    margin-right: 0;
-    background : blue;
+
+.subChatArea p {
+    padding:10px;
+    margin-top : -75px;
+    margin-left : 80px;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background : #fff;
+    text-align: center;
+    line-height: 70px;
+    text-transform: capitalize;
+    font-size:18px;
+    font-weight:600;
+}
+
+.inputArea {
+    height : 40px;
+    margin-top:8px;
+}
+
+.inputArea input {
+    width:83%;
+    height : 35px;
+    font-size : 18px;
+}
+
+.inputArea input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 5px #9ecaed;
 }
 
 .classHide {
-    display : none
+    display: none
 }
 
-.classShow{
-    display : block;
+.classShow {
+    display: block;
+    color : #fff;
+}
+
+.left {
+    float : left;
+    clear: both;
+}
+
+.right {
+    float : right;
+    clear: both;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
 }
