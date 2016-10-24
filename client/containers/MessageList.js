@@ -11,13 +11,15 @@ class MessageList extends React.Component {
         let {messages, className} = this.props;
 
         return (
-            <div className={className}>
+            <ol className="chat">
+
                 {messages.map(
                     function (message, i) {
                         return <Message message={message} key={i}/>
                     }
                 )}
-            </div>
+            </ol>
+
         );
 
     }

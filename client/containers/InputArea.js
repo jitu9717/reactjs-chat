@@ -1,5 +1,5 @@
 /**
- * Created by Jitender on 24/10/16.
+ * Created by pooja on 24/10/16.
  */
 
 import React from 'react';
@@ -15,9 +15,9 @@ class InputArea extends React.Component {
         return (
             <div className={className}>
                 
-                <InputField value={value} onChange={changeHandler} type="input" placeholder="Type your message" required/>
+                <InputField value={value} onChange={changeHandler} type="input" placeholder="Type here..." required/>
                 
-                <Button onClick={sendMessage} value="Send"/>
+                <Button className="floatRight" onClick={sendMessage} value="Send"/>
                 
             </div>
         )

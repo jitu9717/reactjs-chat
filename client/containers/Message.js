@@ -26,34 +26,21 @@ class Message extends React.Component {
 
         let {message} = this.props;
         let res = message.from.name.substring(0,1);
-        let value= '';
+        let aligntext= '';
         if (this.state.token == message.from.id)
-            value = 300;
+            aligntext = 'self';
         else
-            value = 0;
+            aligntext = 'other';
 
 
         return (
-            <div className="subChatArea" style={{marginLeft : value}}>
-                <div className="circle">
 
-                </div>
-                <p className = 'subChatAreaP'>
-
-                    <span className='left'>
-                       <b> {message.from.name} : </b>
-                    </span><br/>
-
-                    <span className='right' style={{marginTop:-17}}>
-
-                    </span><br/>
-
-                    <span>
-                        {message.text}
-                    </span>
-
-                </p>
-            </div>
+                <li className={aligntext}>
+                    <div className="avatar"><span><b> {res}</b></span></div>
+                    <div className="msg">
+                        <p> {message.text}</p>
+                    </div>
+                </li>
 
 
         )

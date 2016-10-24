@@ -21,7 +21,6 @@ let initialState = {
 };
 
 export default function message(state = initialState, action) {
-    console.log(action,'action--')
 
     switch (action.type) {
 
