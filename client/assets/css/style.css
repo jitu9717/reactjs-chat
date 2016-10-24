@@ -72,8 +72,6 @@ p {
     padding: 10px 30px;
     font-weight: bold;
     color: #FFF;
-    background-color: #bdc3c7;
-    background: linear-gradient(#bdc3c7, #95a5a6);
     border: none;
     outline: none;
     font-size : 18px;
@@ -118,7 +116,7 @@ p {
 .inputArea {
     height : 40px;
     margin-top:8px;
-    border-top: 1px solid #000000;
+    border-top: 1px solid rgba(82,179,217,0.9);
     padding-top: 5px;
 }
 
@@ -260,6 +258,8 @@ a{
     padding: 0 0 50px 0;
     margin-top: 60px;
     margin-bottom: 10px;
+    max-height: 500px;
+    overflow-y: scroll;
 }
 .chat li {
     padding: 0.5rem;
@@ -277,6 +277,7 @@ a{
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     background-color: rgba(255,255,255,0.9);
+    text-align: center;
 }
 .chat .avatar img {
     width: 40px;
@@ -351,17 +352,19 @@ a{
     border-right-color: transparent;
     border-top-color: transparent;
     box-shadow: 0px 2px 0px #D4D4D4;
+    margin-left: -33px;
+    margin-top: 10px;
 }
 
 .msg {
     background: white;
-    min-width: 50px;
+    min-width: 250px;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 2px;s
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
 }
 .msg p {
-    font-size: 0.8rem;
+    font-size: 2.0rem;
     margin: 0 0 0.2rem 0;
     color: #777;
 }
@@ -486,4 +489,12 @@ input.textarea {
 
 .floatRight  {
     float: right;
+    background: rgba(82,179,217,0.9);
+}
+
+.floatRightBtn  {
+    float: right;
+    width: 70px;
+    height: 51px;
+    border-radius: 5px;
 }

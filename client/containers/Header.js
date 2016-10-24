@@ -15,9 +15,9 @@ class Header extends React.Component {
 
 
             <div className="menu">
-            <div className="back"><i class="fa fa-chevron-left"></i> <img src="http://i.imgur.com/DY6gND0.png" draggable="false" /></div>
-            <div className="name">{spanText}</div>
-            <Button className="floatRight" onClick={clickHandler} value="Exit" />
+
+            <div className="name">{"Hi "}{spanText}</div>
+            <Button className="floatRightBtn" onClick={clickHandler} value="Exit" />
             </div>
             
         );

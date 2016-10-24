@@ -25,7 +25,7 @@ class Message extends React.Component {
     render() {
 
         let {message} = this.props;
-        let res = message.from.name.substring(0,1);
+        let res = message.from.name.substring(0,2)+"..";
         let aligntext= '';
         if (this.state.token == message.from.id)
             aligntext = 'self';
