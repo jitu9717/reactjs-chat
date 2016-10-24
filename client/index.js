@@ -9,12 +9,13 @@ import configureStore from './store'
 import {socket} from './socket';
 import {messageReceived} from './actions/chat.action';
 import {Router, browserHistory} from 'react-router';
-import routes from './routes';
+import route from './route/routes.js';
 import {IntlProvider, FormattedMessage} from 'react-intl';
 
 const store = configureStore();
+let rootElement = document.getElementById('app');
 
 ReactDOM.render(<Provider store={store}>
-        <Router routes={routes} history={browserHistory}/>
+        <Router routes={route} history={browserHistory}/>
     </Provider>
-    , document.getElementById('app'));
+    ,rootElement);
