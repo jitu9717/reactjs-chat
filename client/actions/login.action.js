@@ -26,7 +26,7 @@ export function signUp(userName) {
                     dispatchAction(response)
                 }
             }).catch((err) => {
-                dispatch(user("User already exist"));
+                dispatch(user("User Exist"));
             });
         };
     }
@@ -49,9 +49,9 @@ export function login(userName) {
                     dispatchAction(response)
                 }
                 else
-                    dispatch(user("User doesn't exist"));
+                    dispatch(user("User not found"));
             }).catch((err) => {
-                dispatch(user("User doesn't exist"));
+                dispatch(user("User not found"));
             });
         }
     };
@@ -71,9 +71,9 @@ export function getUser(id) {
                 dispatch(loadMessages(response.data.userName, response.data._id));
             }
             else
-                dispatch(user("Please try again later"));
+                dispatch(user("Please try after sometime"));
         }).catch((err) => {
-            dispatch(user("Please try again later"));
+            dispatch(user("Please try after sometime"));
         });
     };
 
