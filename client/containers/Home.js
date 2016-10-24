@@ -93,7 +93,7 @@ class Home extends React.Component {
         return (
             <div className="home">
                 
-                <Header clickHandler={this.logOut} btnText='Log Out' spanText={this.props.user.userName} greetings="Hello" className="header"/>
+                <Header clickHandler={this.logOut} btnText='Log Out' spanText={this.props.user.userName} className="header"/>
 
                 <MessageList messages={this.props.messages} className="chatArea"/>
 
